@@ -1,0 +1,51 @@
+<div> 
+  <!----navbar------>
+  <nav class="navbar navbar-default" id="header-navbar">
+    <div class="container-fluid" id="navbar-continer"> 
+      
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-click" aria-expanded="false"> 
+        <span class="sr-only">Toggle navigation</span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="home"> <span class="glyphicon glyphicon-home"></span></a>
+        <form class="form-group" role="search" id="nav-form" ng-submit="search(searchString)" name="frmMain">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" ng-model="searchString">
+              <span class="input-group-btn"> <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button> </span> </div>
+               
+          </div>
+         
+        </form>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-click">
+        <ul class="nav navbar-nav" ng-repeat="menuitem in mainmenu">
+          <li class="dropdown"> <a href="" class="dropdown-toggle" data-toggle="dropdown">{{menuitem.Menu_Item}}<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              	<li ng-repeat="submenu in menuitem.Sub_Menu">  <a ui-sref={{submenu.toState}}> <span ng-if="submenu.class_name" class="{{submenu.class_name}}"></span> <img ng-if="submenu.mnuimage" src="{{commonpath}}/{{submenu.mnuimage}}" class="img-responsive menu-icon" /> {{submenu.smenu_item}} </a> </li>
+            </ul>
+          </li>
+        </ul>
+      
+        <form class="navbar-form navbar-left" role="search" id="collapse-navbar" ng-submit="search(searchString)">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" ng-model="searchString">
+              <span class="input-group-btn"> <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button> </span> </div>
+          </div>
+        </form>
+        
+    
+      </div>
+    </div>
+    <!-- /.container-fluid --> 
+  </nav>
+  <!----navbar------> 
+  
+</div>

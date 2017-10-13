@@ -1,0 +1,12 @@
+redis:
+  config:
+    clusterEnabled: false
+    nodes: 
+    host: localhost
+    port: 6379
+    poolMaxTotal: 10
+    poolInitSize: 2
+razorpay:
+    config:
+        keyId:rzp_test_zRYq0EBQOdeeMW
+        keySecret:lZUYQt7qAahuFw75xI05IDeH

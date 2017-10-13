@@ -1,0 +1,14 @@
+login:
+  config:
+    tokenParameter: token
+    userIdParameter: userId
+    passwordParameter: password
+
+firebase:
+  config:
+    serviceAccountKey: D:\dataCollection\Firebase\like2eat-auth-cc883-firebase-adminsdk-ydov3-8ad11b1f58.json
+    databaseUrl: https://like2eat-auth-cc883.firebaseio.com/
+
+auth:
+  config:
+    csrfCheckEnabled: true

@@ -1,0 +1,38 @@
+<div class="container" ng-controller="StatusController">
+	<div class="page-header">
+		<h1>A Status Checklist</h1>
+		<button class="btn btn-primary" ui-sref="home">Home</button>
+	</div>
+
+
+	<div class="alert alert-info" role="alert"
+		ng-hide="statuses && statuses.length > 0">There are no items
+		yet.</div>
+	<form class="form-horizontal" role="form" ng-submit="addItem(newItem)">
+		<div class="form-group" ng-repeat="status in statuses">
+			<div class="checkbox col-xs-9">
+				<label> {{item.itemId}}
+				</label> <label> {{status.id}} </label> <label> {{status.status}} </label> <label>
+					{{ status.createdDate | date }} </label>
+			</div>
+			<div class="col-xs-3">
+				<button class="pull-right btn btn-danger" type="button"
+					title="Delete" ng-click="deleteItem(status)">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</div>
+		</div>
+		<div class="input-group">
+			<input type="text" class="form-control" ng-model="status"
+				placeholder="Enter the description..." />
+			<!-- <input type="date" class="form-control" ng-model="newItem.creDate" placeholder="Enter the Date" /> -->
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="submit" ng-disabled="!status"
+					title="Add">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+			</span>
+		</div>
+	</form>
+
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />    
+  </head>
+  <body ng-app="myApp" ng-controller="AppController">
+  	<!-- <td><button class="btn btn-primary" ui-sref="status">Status</button></td>
+  	<td><button class="btn btn-primary" ui-sref="home">Items</button></td> -->
+  	<h2>Quapt Sample App!</h2>
+
+  	
+    <div class="container" >
+    
+    <div ui-view></div>     
+     
+    </div>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="./bower_components/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="./js/angular-ui-router.min.js"></script> 
+    
+    <script type="text/javascript" src="./app/app.js"></script>
+    <script type="text/javascript" src="./app/app.state.js"></script>
+    <script type="text/javascript" src="./app/home/home-controllers.js"></script>
+    <script type="text/javascript" src="./app/services.js"></script>
+    
+    <script type="text/javascript" src="./app/status/status.state.js"></script>
+    <script type="text/javascript" src="./app/status/status-controllers.js"></script>
+    <script type="text/javascript" src="./app/status/status-services.js"></script>
+    
+    <script type="text/javascript" src="./app/main-controllers.js"></script>
+    
+    <!-- login -->
+    <script type="text/javascript"  src="./app/login/login-controllers.js"></script>
+    <script type="text/javascript"  src="./app/login/login-services.js"></script>
+    
+    
+    
+  </body>
+</html>
+
+

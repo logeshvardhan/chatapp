@@ -1,0 +1,51 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration will be overriden by the Spring profile you use,
+# for example application-dev.yml if you use the "dev" profile.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+security:
+    user:
+        password: password
+
+
+spring:
+    application:
+        name: Quapt Chat App
+    #profiles:
+        #active: prod
+
+redis:
+       config:
+           clusterEnabled: false
+           nodes:
+           host: localhost
+           port: 6379
+           poolMaxTotal: 10
+           poolInitSize: 2
+razorpay:
+   config:
+       keyId: rzp_test_zRYq0EBQOdeeMW
+       keySecret: lZUYQt7qAahuFw75xI05IDeH
+
+login:
+  config:
+    tokenParameter: token
+    userIdParameter: userId
+    passwordParameter: password
+
+firebase:
+  config:
+    serviceAccountKey: D:\dataCollection\Firebase\like2eat-auth-cc883-firebase-adminsdk-ydov3-8ad11b1f58.json
+    databaseUrl: https://like2eat-auth-cc883.firebaseio.com/
+
+auth:
+  config:
+    csrfCheckEnabled: true

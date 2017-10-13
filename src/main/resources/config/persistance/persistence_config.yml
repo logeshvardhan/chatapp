@@ -1,0 +1,8 @@
+redis:
+  config:
+    clusterEnabled: false
+    nodes: 
+    host: localhost
+    port: 6379
+    poolMaxTotal: 10
+    poolInitSize: 2
